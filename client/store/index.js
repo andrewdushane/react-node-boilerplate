@@ -1,3 +1,5 @@
+/* global __PRODUCTION__ */
+
 import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
@@ -7,10 +9,12 @@ import rootSaga from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(
-  rootReducer,
-  applyMiddleware(sagaMiddleware, createLogger())
-);
+const middleware = __PRODUCTION__ ?
+  applyMiddleware(sagaMiddleware)
+  :
+  applyMiddleware(sagaMiddleware, createLogger());
+
+const store = createStore(rootReducer, middleware);
 
 sagaMiddleware.run(rootSaga);
 
