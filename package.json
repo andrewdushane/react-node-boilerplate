@@ -1,0 +1,101 @@
+{
+  "name": "react-node-boilerplate",
+  "version": "1.0.0",
+  "description": "React front-end, Node back-end boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "dist": "NODE_ENV=production webpack -p --progress --colors",
+    "postinstall": "npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "6",
+    "npm": "3"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "redux",
+    "api",
+    "saga"
+  ],
+  "author": "Andrew Dushane",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "assets-webpack-plugin": "*",
+    "autoprefixer-loader": "*",
+    "babel-core": "*",
+    "babel-jest": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-polyfill": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-0": "*",
+    "babel-runtime": "*",
+    "compression": "*",
+    "coveralls": "*",
+    "css-loader": "*",
+    "ejs": "*",
+    "exports-loader": "*",
+    "express": "*",
+    "express-ejs-layouts": "*",
+    "extract-text-webpack-plugin": "*",
+    "feed-read": "*",
+    "file-loader": "*",
+    "imports-loader": "*",
+    "jest-cli": "*",
+    "less": "*",
+    "less-loader": "*",
+    "lodash": "*",
+    "moment": "*",
+    "node-sass": "*",
+    "react": "*",
+    "react-addons-test-utils": "*",
+    "react-dom": "*",
+    "react-hot-loader": "*",
+    "react-redux": "*",
+    "react-router": "*",
+    "redux": "*",
+    "redux-logger": "*",
+    "redux-saga": "*",
+    "sass-loader": "*",
+    "style-loader": "*",
+    "url-loader": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*",
+    "whatwg-fetch": "*"
+  },
+  "devDependencies": {
+    "eslint": "3.4.0",
+    "eslint-config-airbnb": "10.0.1",
+    "eslint-loader": "1.5.0",
+    "eslint-plugin-import": "1.14.0",
+    "eslint-plugin-jsx-a11y": "2.2.1",
+    "eslint-plugin-react": "6.2.0"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testFileExtensions": [
+      "test.js",
+      "test.jsx"
+    ],
+    "testDirectoryName": "client"
+  }
+}
