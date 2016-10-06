@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import Layout from '../components/Layout';
-import Home from '../components/Home';
+import Home from '../components/HomePage';
 import About from '../components/About';
 
 const Routes = () => (

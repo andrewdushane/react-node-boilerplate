@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { exampleRequest, clearMessage } from '../actions';
 
-const Home = ({ exampleRequest: request, clearMessage: clear, message }) => (
+export const Home = ({ exampleRequest: request, clearMessage: clear, message }) => (
   <div>
     <header>
       Hello, World

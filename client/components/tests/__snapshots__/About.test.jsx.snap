@@ -1,0 +1,5 @@
+exports[`test About renders as expected 1`] = `
+<div>
+  About this App
+</div>
+`;
